@@ -27,8 +27,8 @@ def transplant(new_net, net, suffix=''):
             if net.params[p][i].data.shape != new_net.params[p_new][i].data.shape:
                 print('coercing', p, i, 'from', net.params[p][i].data.shape, 'to', new_net.params[p_new][i].data.shape)
             else:
-                print('copying', p, ' -> ', p_new, i
-            new_net.params[p_new][i].data.flat = net.params[p][i].data.flat)
+                print('copying', p, ' -> ', p_new, i)
+            new_net.params[p_new][i].data.flat = net.params[p][i].data.flat
 
 def upsample_filt(size):
     """
